@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"
+        Title="MainWindow" Height="643" Width="800"
         Loaded="Window_Loaded">
     <Window.Resources>
         <ResourceDictionary>
@@ -15,14 +15,146 @@
         </ResourceDictionary>
     </Window.Resources>
     <Grid>
-        <DataGrid x:Name="dgOrderTable" Height="354" Margin="0,0,10,0" Width="833" AutoGenerateColumns="False"  CanUserReorderColumns="False" RowDetailsVisibilityMode="Visible" IsReadOnly="True"  Foreground="#FF33631E" Background="#FF1E2C35"  >
+        <!--<DataGrid x:Name="dgOrderTable" Height="354" Margin="0,0,10,0" Width="833"   AutoGenerateColumns="False"  CanUserReorderColumns="False" RowDetailsVisibilityMode="Visible"   Foreground="#FF33631E" Background="#FF1E2C35"  >
             <DataGrid.Columns>
-                <DataGridTextColumn Header="День Недели" Binding="{Binding NAME_SUBJECT}" IsReadOnly="True" CellStyle="{StaticResource ResourceKey=dgStyle}"/>
-                <DataGridCheckBoxColumn Header="ФИО" />
-                <DataGridTextColumn Header="Привоз" Binding="{Binding PRICE}" IsReadOnly="True" CellStyle="{StaticResource ResourceKey=dgStyle}"/>
-                <DataGridTextColumn Header="Выход" Binding="{Binding RUN_TIME}" IsReadOnly="True" CellStyle="{StaticResource ResourceKey=dgStyle}"/>
-                <DataGridTextColumn Header="Зарплата" Binding="{Binding RUN_TIME}" IsReadOnly="True" CellStyle="{StaticResource ResourceKey=dgStyle}"/>
+                <DataGridTextColumn Header="День Недели" Binding="{Binding Day}" IsReadOnly="True" CellStyle="{StaticResource ResourceKey=dgStyle}" />
+                <DataGridTemplateColumn x:Name="cbName" Header="ФИО" SortMemberPath="IsSelected" CellStyle="{StaticResource ResourceKey=dgStyle}">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <CheckBox   Content="Я" />
+                                <CheckBox   Content="Ангелина Кузнецов" />
+                                <CheckBox   Content="Фатима Османова" />
+                                <CheckBox   Content="Света Ягъяева" />
+                                <CheckBox   Content="Молодой парень" />
+                                <CheckBox   Content="Марина Семёнова" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn Header="Привоз"  Binding="{Binding Path=null, UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridTextColumn Header="Выход" Binding="{Binding  UpdateSourceTrigger=PropertyChanged}" CellStyle="{StaticResource ResourceKey=dgStyle}"/>
+                <DataGridTextColumn Header="Зарплата" Binding="{Binding  UpdateSourceTrigger=PropertyChanged}"  CellStyle="{StaticResource ResourceKey=dgStyle}"/>
             </DataGrid.Columns>
-        </DataGrid>
+        </DataGrid>-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="158*"></ColumnDefinition>
+            <ColumnDefinition Width="158*"></ColumnDefinition>
+            <ColumnDefinition Width="159*"></ColumnDefinition>
+            <ColumnDefinition Width="158*"></ColumnDefinition>
+            <ColumnDefinition Width="132*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="23*"></RowDefinition>
+            <RowDefinition Height="100*"></RowDefinition>
+            <RowDefinition Height="100*"></RowDefinition>
+            <RowDefinition Height="100*"></RowDefinition>
+            <RowDefinition Height="100*"></RowDefinition>
+            <RowDefinition Height="100*"></RowDefinition>
+            <RowDefinition Height="100*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <!--Первая колонка-->
+        <TextBlock Grid.Column="0" Grid.Row="0" TextAlignment="Center">Дни недели</TextBlock>
+        
+        
+        <TextBlock Grid.Column="1" Grid.Row="0"  TextAlignment="Center">ФИО</TextBlock>
+        <TextBlock Grid.Column="0" Grid.Row="1" Margin="20" TextAlignment="Center">Понедельник</TextBlock>
+        <StackPanel  Grid.Column="1" Grid.Row="1" >
+            <ListBox>
+                <CheckBox   Content="Я" />
+                <CheckBox   Content="Ангелина Кузнецов" />
+                <CheckBox   Content="Фатима Османова" />
+                <CheckBox   Content="Света Ягъяева" />
+                <CheckBox   Content="Молодой парень" />
+                <CheckBox   Content="Марина Семёнова" />
+            </ListBox>
+        </StackPanel>
+
+        <TextBlock Grid.Column="0" Grid.Row="2" Margin="20" TextAlignment="Center">Вторник</TextBlock>
+        <StackPanel  Grid.Column="1" Grid.Row="2" >
+            <ListBox>
+                <CheckBox   Content="Я" />
+                <CheckBox   Content="Ангелина Кузнецов" />
+                <CheckBox   Content="Фатима Османова" />
+                <CheckBox   Content="Света Ягъяева" />
+                <CheckBox   Content="Молодой парень" />
+                <CheckBox   Content="Марина Семёнова" />
+            </ListBox>
+            
+        </StackPanel>
+
+        <TextBlock Grid.Column="0" Grid.Row="3" Margin="20" TextAlignment="Center">Среда</TextBlock>
+        <StackPanel  Grid.Column="1" Grid.Row="3" >
+            <ListBox>
+                <CheckBox   Content="Я" />
+                <CheckBox   Content="Ангелина Кузнецов" />
+                <CheckBox   Content="Фатима Османова" />
+                <CheckBox   Content="Света Ягъяева" />
+                <CheckBox   Content="Молодой парень" />
+                <CheckBox   Content="Марина Семёнова" />
+            </ListBox>
+        </StackPanel>
+
+        <TextBlock Grid.Column="0" Grid.Row="4" Margin="20,20,20,8" TextAlignment="Center">Четверг</TextBlock>
+        <StackPanel  Grid.Column="1" Grid.Row="4" >
+            <ListBox>
+                <CheckBox   Content="Я" />
+                <CheckBox   Content="Ангелина Кузнецов" />
+                <CheckBox   Content="Фатима Османова" />
+                <CheckBox   Content="Света Ягъяева" />
+                <CheckBox   Content="Молодой парень" />
+                <CheckBox   Content="Марина Семёнова" />
+            </ListBox>
+        </StackPanel>
+
+        <TextBlock Grid.Column="0" Grid.Row="5" Margin="20" TextAlignment="Center">Пятница</TextBlock>
+        <StackPanel  Grid.Column="1" Grid.Row="5" >
+            <ListBox>
+                <CheckBox   Content="Я" />
+                <CheckBox   Content="Ангелина Кузнецов" />
+                <CheckBox   Content="Фатима Османова" />
+                <CheckBox   Content="Света Ягъяева" />
+                <CheckBox   Content="Молодой парень" />
+                <CheckBox   Content="Марина Семёнова" />
+            </ListBox>
+        </StackPanel>
+
+        <TextBlock Grid.Column="0" Grid.Row="6" Margin="20" TextAlignment="Center">Суббота</TextBlock>
+        <StackPanel  Grid.Column="1" Grid.Row="6" >
+            <ListBox>
+                <CheckBox   Content="Я" />
+                <CheckBox   Content="Ангелина Кузнецов" />
+                <CheckBox   Content="Фатима Османова" />
+                <CheckBox   Content="Света Ягъяева" />
+                <CheckBox   Content="Молодой парень" />
+                <CheckBox   Content="Марина Семёнова" />
+            </ListBox>
+        </StackPanel>
+
+       
+
+        <TextBlock Grid.Column="2" Grid.Row="0"  TextAlignment="Center">Привоз</TextBlock>
+        <TextBox  Grid.Column="2" Grid.Row="1" Margin="10,32,10,32"/>
+        <TextBox  Grid.Column="2" Grid.Row="2" Margin="10,32,10,32"/>
+        <TextBox  Grid.Column="2" Grid.Row="3" Margin="10,32,10,32"/>
+        <TextBox  Grid.Column="2" Grid.Row="4" Margin="10,32,10,32"/>
+        <TextBox  Grid.Column="2" Grid.Row="5" Margin="10,32,10,32"/>
+        <TextBox  Grid.Column="2" Grid.Row="6" Margin="10,32,10,32"/>
+        
+        <TextBlock Grid.Column="3" Grid.Row="0"  TextAlignment="Center">Выход</TextBlock>
+        <TextBox  Grid.Column="3" Grid.Row="1" Margin="10,32,10,32"/>
+        <TextBox  Grid.Column="3" Grid.Row="2" Margin="10,32,10,32"/>
+        <TextBox  Grid.Column="3" Grid.Row="3" Margin="10,32,10,32"/>
+        <TextBox  Grid.Column="3" Grid.Row="4" Margin="10,32,10,32"/>
+        <TextBox  Grid.Column="3" Grid.Row="5" Margin="10,32,10,32"/>
+        <TextBox  Grid.Column="3" Grid.Row="6" Margin="10,32,10,32"/>
+        
+        <TextBlock Grid.Column="4" Grid.Row="0"  TextAlignment="Center" Grid.ColumnSpan="2">Зарплата</TextBlock>
+        <TextBlock Grid.Column="4" Grid.Row="1" x:Name="TextBlockMany1"/>
+        <TextBlock Grid.Column="4" Grid.Row="2" x:Name="TextBlockMany2"/>
+        <TextBlock Grid.Column="4" Grid.Row="3" x:Name="TextBlockMany3"/>
+        <TextBlock Grid.Column="4" Grid.Row="4" x:Name="TextBlockMany4"/>
+        <TextBlock Grid.Column="4" Grid.Row="5" x:Name="TextBlockMany5"/>
+        <TextBlock Grid.Column="4" Grid.Row="6" x:Name="TextBlockMany6"/>
     </Grid>
 </Window>
