@@ -1,0 +1,28 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        Loaded="Window_Loaded">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Dictionary1.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <DataGrid x:Name="dgOrderTable" Height="354" Margin="0,0,10,0" Width="833" AutoGenerateColumns="False"  CanUserReorderColumns="False" RowDetailsVisibilityMode="Visible" IsReadOnly="True"  Foreground="#FF33631E" Background="#FF1E2C35"  >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="День Недели" Binding="{Binding NAME_SUBJECT}" IsReadOnly="True" CellStyle="{StaticResource ResourceKey=dgStyle}"/>
+                <DataGridCheckBoxColumn Header="ФИО" />
+                <DataGridTextColumn Header="Привоз" Binding="{Binding PRICE}" IsReadOnly="True" CellStyle="{StaticResource ResourceKey=dgStyle}"/>
+                <DataGridTextColumn Header="Выход" Binding="{Binding RUN_TIME}" IsReadOnly="True" CellStyle="{StaticResource ResourceKey=dgStyle}"/>
+                <DataGridTextColumn Header="Зарплата" Binding="{Binding RUN_TIME}" IsReadOnly="True" CellStyle="{StaticResource ResourceKey=dgStyle}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
