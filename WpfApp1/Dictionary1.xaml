@@ -6,4 +6,18 @@
         <Setter Property="Control.FontWeight" Value="Bold"/>
         <Setter Property="Control.Foreground" Value="#FF1E2C35"/>
     </Style>
+
+    <Style x:Key="tbStyleHeader">
+        <Setter Property="Control.FontWeight" Value="Bold"/>
+        <Setter Property="Control.Foreground" Value="White"/>
+        <Setter Property="Control.Background" Value="#FF5EAD89"/>
+        <Setter Property="Control.FontSize" Value="18"/>
+    </Style>
+
+    <Style x:Key="tbStyleLeftPanel">
+        <Setter Property="Control.FontWeight" Value="Bold"/>
+        <Setter Property="Control.Foreground" Value="#FF6C7479"/>
+        <Setter Property="Control.Background" Value="#FFCACED1"/>
+        <Setter Property="Control.FontSize" Value="18"/>
+    </Style>
 </ResourceDictionary>

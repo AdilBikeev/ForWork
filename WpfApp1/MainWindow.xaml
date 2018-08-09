@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="643" Width="800"
+        Title="MainWindow" Height="948" Width="915"
         Loaded="Window_Loaded">
     <Window.Resources>
         <ResourceDictionary>
@@ -14,34 +14,20 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FFF70909" Offset="0"/>
+            <GradientStop Color="#FF2BBF89" Offset="1"/>
+            <GradientStop Color="#FEFF5A0D" Offset="0.004"/>
+        </LinearGradientBrush>
+    </Window.Background>
     <Grid>
-        <!--<DataGrid x:Name="dgOrderTable" Height="354" Margin="0,0,10,0" Width="833"   AutoGenerateColumns="False"  CanUserReorderColumns="False" RowDetailsVisibilityMode="Visible"   Foreground="#FF33631E" Background="#FF1E2C35"  >
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="День Недели" Binding="{Binding Day}" IsReadOnly="True" CellStyle="{StaticResource ResourceKey=dgStyle}" />
-                <DataGridTemplateColumn x:Name="cbName" Header="ФИО" SortMemberPath="IsSelected" CellStyle="{StaticResource ResourceKey=dgStyle}">
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <StackPanel>
-                                <CheckBox   Content="Я" />
-                                <CheckBox   Content="Ангелина Кузнецов" />
-                                <CheckBox   Content="Фатима Османова" />
-                                <CheckBox   Content="Света Ягъяева" />
-                                <CheckBox   Content="Молодой парень" />
-                                <CheckBox   Content="Марина Семёнова" />
-                            </StackPanel>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
-                <DataGridTextColumn Header="Привоз"  Binding="{Binding Path=null, UpdateSourceTrigger=PropertyChanged}"/>
-                <DataGridTextColumn Header="Выход" Binding="{Binding  UpdateSourceTrigger=PropertyChanged}" CellStyle="{StaticResource ResourceKey=dgStyle}"/>
-                <DataGridTextColumn Header="Зарплата" Binding="{Binding  UpdateSourceTrigger=PropertyChanged}"  CellStyle="{StaticResource ResourceKey=dgStyle}"/>
-            </DataGrid.Columns>
-        </DataGrid>-->
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="158*"></ColumnDefinition>
             <ColumnDefinition Width="158*"></ColumnDefinition>
             <ColumnDefinition Width="159*"></ColumnDefinition>
             <ColumnDefinition Width="158*"></ColumnDefinition>
+            <ColumnDefinition Width="132*"/>
             <ColumnDefinition Width="132*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
@@ -52,109 +38,130 @@
             <RowDefinition Height="100*"></RowDefinition>
             <RowDefinition Height="100*"></RowDefinition>
             <RowDefinition Height="100*"></RowDefinition>
+            <RowDefinition Height="100*"></RowDefinition>
         </Grid.RowDefinitions>
         <!--Первая колонка-->
-        <TextBlock Grid.Column="0" Grid.Row="0" TextAlignment="Center">Дни недели</TextBlock>
-        
-        
-        <TextBlock Grid.Column="1" Grid.Row="0"  TextAlignment="Center">ФИО</TextBlock>
-        <TextBlock Grid.Column="0" Grid.Row="1" Margin="20" TextAlignment="Center">Понедельник</TextBlock>
+        <TextBlock Grid.Column="0" Grid.Row="0" TextAlignment="Center" Style="{StaticResource ResourceKey=tbStyleHeader}" Background="#FF5EAD89">Дни недели</TextBlock>
+
+
+        <TextBlock Grid.Column="1" Grid.Row="0"  TextAlignment="Center"  Style="{StaticResource ResourceKey=tbStyleHeader}" Background="#FF5EAD89">ФИО</TextBlock>
+        <TextBlock Grid.Column="0" Grid.Row="1"  TextAlignment="Center" Background="#FFCACED1" Style="{StaticResource ResourceKey=tbStyleLeftPanel}">Понедельник</TextBlock>
         <StackPanel  Grid.Column="1" Grid.Row="1" >
-            <ListBox>
-                <CheckBox   Content="Я" />
-                <CheckBox   Content="Ангелина Кузнецов" />
-                <CheckBox   Content="Фатима Османова" />
-                <CheckBox   Content="Света Ягъяева" />
-                <CheckBox   Content="Молодой парень" />
-                <CheckBox   Content="Марина Семёнова" />
+            <ListBox x:Name="lb1" Background="#FFE7E8EA">
+                <CheckBox   Content="Я" Background="#FF5EAD89" />
+                <CheckBox   Content="Ангелина Кузнецов" Background="#FF5EAD89"/>
+                <CheckBox   Content="Фатима Османова" Background="#FF5EAD89"/>
+                <CheckBox   Content="Света Ягъяева" Background="#FF5EAD89"/>
+                <CheckBox   Content="Молодой парень" Background="#FF5EAD89"/>
+                <CheckBox   Content="Марина Семёнова" Background="#FF5EAD89"/>
             </ListBox>
         </StackPanel>
 
-        <TextBlock Grid.Column="0" Grid.Row="2" Margin="20" TextAlignment="Center">Вторник</TextBlock>
+        <TextBlock Grid.Column="0" Grid.Row="2" TextAlignment="Center" Background="#FFCACED1" Style="{StaticResource ResourceKey=tbStyleLeftPanel}">Вторник</TextBlock>
         <StackPanel  Grid.Column="1" Grid.Row="2" >
-            <ListBox>
-                <CheckBox   Content="Я" />
-                <CheckBox   Content="Ангелина Кузнецов" />
-                <CheckBox   Content="Фатима Османова" />
-                <CheckBox   Content="Света Ягъяева" />
-                <CheckBox   Content="Молодой парень" />
-                <CheckBox   Content="Марина Семёнова" />
+            <ListBox x:Name="lb2" Background="#FFE7E8EA">
+                <CheckBox   Content="Я" Background="#FF5EAD89"/>
+                <CheckBox   Content="Ангелина Кузнецов" Background="#FF5EAD89"/>
+                <CheckBox   Content="Фатима Османова" Background="#FF5EAD89"/>
+                <CheckBox   Content="Света Ягъяева" Background="#FF5EAD89"/>
+                <CheckBox   Content="Молодой парень" Background="#FF5EAD89"/>
+                <CheckBox   Content="Марина Семёнова" Background="#FF5EAD89"/>
             </ListBox>
-            
+
         </StackPanel>
 
-        <TextBlock Grid.Column="0" Grid.Row="3" Margin="20" TextAlignment="Center">Среда</TextBlock>
+        <TextBlock Grid.Column="0" Grid.Row="3"  TextAlignment="Center"  Background="#FFCACED1" Style="{StaticResource ResourceKey=tbStyleLeftPanel}">Среда</TextBlock>
         <StackPanel  Grid.Column="1" Grid.Row="3" >
-            <ListBox>
-                <CheckBox   Content="Я" />
-                <CheckBox   Content="Ангелина Кузнецов" />
-                <CheckBox   Content="Фатима Османова" />
-                <CheckBox   Content="Света Ягъяева" />
-                <CheckBox   Content="Молодой парень" />
-                <CheckBox   Content="Марина Семёнова" />
+            <ListBox x:Name="lb3" Background="#FFE7E8EA">
+                <CheckBox   Content="Я" Background="#FF5EAD89"/>
+                <CheckBox   Content="Ангелина Кузнецов" Background="#FF5EAD89"/>
+                <CheckBox   Content="Фатима Османова" Background="#FF5EAD89"/>
+                <CheckBox   Content="Света Ягъяева" Background="#FF5EAD89"/>
+                <CheckBox   Content="Молодой парень" Background="#FF5EAD89"/>
+                <CheckBox   Content="Марина Семёнова" Background="#FF5EAD89"/>
             </ListBox>
         </StackPanel>
 
-        <TextBlock Grid.Column="0" Grid.Row="4" Margin="20,20,20,8" TextAlignment="Center">Четверг</TextBlock>
+        <TextBlock Grid.Column="0" Grid.Row="4"  TextAlignment="Center"  Background="#FFCACED1" Style="{StaticResource ResourceKey=tbStyleLeftPanel}">Четверг</TextBlock>
         <StackPanel  Grid.Column="1" Grid.Row="4" >
-            <ListBox>
-                <CheckBox   Content="Я" />
-                <CheckBox   Content="Ангелина Кузнецов" />
-                <CheckBox   Content="Фатима Османова" />
-                <CheckBox   Content="Света Ягъяева" />
-                <CheckBox   Content="Молодой парень" />
-                <CheckBox   Content="Марина Семёнова" />
+            <ListBox x:Name="lb4" Background="#FFE7E8EA">
+                <CheckBox   Content="Я" Background="#FF5EAD89"/>
+                <CheckBox   Content="Ангелина Кузнецов" Background="#FF5EAD89"/>
+                <CheckBox   Content="Фатима Османова" Background="#FF5EAD89"/>
+                <CheckBox   Content="Света Ягъяева" Background="#FF5EAD89"/>
+                <CheckBox   Content="Молодой парень" Background="#FF5EAD89"/>
+                <CheckBox   Content="Марина Семёнова" Background="#FF5EAD89"/>
             </ListBox>
         </StackPanel>
 
-        <TextBlock Grid.Column="0" Grid.Row="5" Margin="20" TextAlignment="Center">Пятница</TextBlock>
+        <TextBlock Grid.Column="0" Grid.Row="5"  TextAlignment="Center"  Background="#FFCACED1" Style="{StaticResource ResourceKey=tbStyleLeftPanel}">Пятница</TextBlock>
         <StackPanel  Grid.Column="1" Grid.Row="5" >
-            <ListBox>
-                <CheckBox   Content="Я" />
-                <CheckBox   Content="Ангелина Кузнецов" />
-                <CheckBox   Content="Фатима Османова" />
-                <CheckBox   Content="Света Ягъяева" />
-                <CheckBox   Content="Молодой парень" />
-                <CheckBox   Content="Марина Семёнова" />
+            <ListBox x:Name="lb5" Background="#FFE7E8EA">
+                <CheckBox   Content="Я" Background="#FF5EAD89"/>
+                <CheckBox   Content="Ангелина Кузнецов" Background="#FF5EAD89"/>
+                <CheckBox   Content="Фатима Османова" Background="#FF5EAD89"/>
+                <CheckBox   Content="Света Ягъяева" Background="#FF5EAD89"/>
+                <CheckBox   Content="Молодой парень" Background="#FF5EAD89"/>
+                <CheckBox   Content="Марина Семёнова" Background="#FF5EAD89"/>
             </ListBox>
         </StackPanel>
 
-        <TextBlock Grid.Column="0" Grid.Row="6" Margin="20" TextAlignment="Center">Суббота</TextBlock>
+        <TextBlock Grid.Column="0" Grid.Row="6" TextAlignment="Center"  Background="#FFCACED1" Style="{StaticResource ResourceKey=tbStyleLeftPanel}">Суббота</TextBlock>
         <StackPanel  Grid.Column="1" Grid.Row="6" >
-            <ListBox>
-                <CheckBox   Content="Я" />
-                <CheckBox   Content="Ангелина Кузнецов" />
-                <CheckBox   Content="Фатима Османова" />
-                <CheckBox   Content="Света Ягъяева" />
-                <CheckBox   Content="Молодой парень" />
-                <CheckBox   Content="Марина Семёнова" />
+            <ListBox x:Name="lb6" Background="#FFE7E8EA">
+                <CheckBox   Content="Я" Background="#FF5EAD89"/>
+                <CheckBox   Content="Ангелина Кузнецов" Background="#FF5EAD89"/>
+                <CheckBox   Content="Фатима Османова" Background="#FF5EAD89"/>
+                <CheckBox   Content="Света Ягъяева" Background="#FF5EAD89"/>
+                <CheckBox   Content="Молодой парень" Background="#FF5EAD89"/>
+                <CheckBox   Content="Марина Семёнова" Background="#FF5EAD89"/>
             </ListBox>
         </StackPanel>
 
-       
 
-        <TextBlock Grid.Column="2" Grid.Row="0"  TextAlignment="Center">Привоз</TextBlock>
-        <TextBox  Grid.Column="2" Grid.Row="1" Margin="10,32,10,32"/>
-        <TextBox  Grid.Column="2" Grid.Row="2" Margin="10,32,10,32"/>
-        <TextBox  Grid.Column="2" Grid.Row="3" Margin="10,32,10,32"/>
-        <TextBox  Grid.Column="2" Grid.Row="4" Margin="10,32,10,32"/>
-        <TextBox  Grid.Column="2" Grid.Row="5" Margin="10,32,10,32"/>
-        <TextBox  Grid.Column="2" Grid.Row="6" Margin="10,32,10,32"/>
-        
-        <TextBlock Grid.Column="3" Grid.Row="0"  TextAlignment="Center">Выход</TextBlock>
-        <TextBox  Grid.Column="3" Grid.Row="1" Margin="10,32,10,32"/>
-        <TextBox  Grid.Column="3" Grid.Row="2" Margin="10,32,10,32"/>
-        <TextBox  Grid.Column="3" Grid.Row="3" Margin="10,32,10,32"/>
-        <TextBox  Grid.Column="3" Grid.Row="4" Margin="10,32,10,32"/>
-        <TextBox  Grid.Column="3" Grid.Row="5" Margin="10,32,10,32"/>
-        <TextBox  Grid.Column="3" Grid.Row="6" Margin="10,32,10,32"/>
-        
-        <TextBlock Grid.Column="4" Grid.Row="0"  TextAlignment="Center" Grid.ColumnSpan="2">Зарплата</TextBlock>
-        <TextBlock Grid.Column="4" Grid.Row="1" x:Name="TextBlockMany1"/>
-        <TextBlock Grid.Column="4" Grid.Row="2" x:Name="TextBlockMany2"/>
-        <TextBlock Grid.Column="4" Grid.Row="3" x:Name="TextBlockMany3"/>
-        <TextBlock Grid.Column="4" Grid.Row="4" x:Name="TextBlockMany4"/>
-        <TextBlock Grid.Column="4" Grid.Row="5" x:Name="TextBlockMany5"/>
-        <TextBlock Grid.Column="4" Grid.Row="6" x:Name="TextBlockMany6"/>
+
+        <TextBlock Grid.Column="2" Grid.Row="0"  TextAlignment="Center" Style="{StaticResource ResourceKey=tbStyleHeader}" Background="#FF5EAD89">Привоз</TextBlock>
+        <TextBox x:Name="tbPrivoz1" Grid.Column="2" Grid.Row="1" Margin="10,32,10,32"  TextAlignment="Center" FontSize="30"/>
+        <TextBox  x:Name="tbPrivoz2" Grid.Column="2" Grid.Row="2" Margin="10,32,10,32" TextAlignment="Center" FontSize="30"/>
+        <TextBox x:Name="tbPrivoz3"  Grid.Column="2" Grid.Row="3" Margin="10,32,10,32" TextAlignment="Center" FontSize="30"/>
+        <TextBox x:Name="tbPrivoz4"  Grid.Column="2" Grid.Row="4" Margin="10,32,10,32" TextAlignment="Center" FontSize="30"/>
+        <TextBox x:Name="tbPrivoz5"  Grid.Column="2" Grid.Row="5" Margin="10,32,10,32" TextAlignment="Center" FontSize="30"/>
+        <TextBox x:Name="tbPrivoz6" Grid.Column="2" Grid.Row="6" Margin="10,32,10,32" TextAlignment="Center" FontSize="30"/>
+
+        <TextBlock Grid.Column="3" Grid.Row="0"  TextAlignment="Center" Style="{StaticResource ResourceKey=tbStyleHeader}" Background="#FF5EAD89">Выход</TextBlock>
+        <TextBox x:Name="tbExit1" Grid.Column="3" Grid.Row="1" Margin="10,32,10,32" TextAlignment="Center" FontSize="30"/>
+        <TextBox x:Name="tbExit2" Grid.Column="3" Grid.Row="2" Margin="10,32,10,32" TextAlignment="Center" FontSize="30"/>
+        <TextBox x:Name="tbExit3"  Grid.Column="3" Grid.Row="3" Margin="10,32,10,32" TextAlignment="Center" FontSize="30"/>
+        <TextBox x:Name="tbExit4"  Grid.Column="3" Grid.Row="4" Margin="10,32,10,32" TextAlignment="Center" FontSize="30"/>
+        <TextBox x:Name="tbExit5"  Grid.Column="3" Grid.Row="5" Margin="10,32,10,32" TextAlignment="Center" FontSize="30"/>
+        <TextBox x:Name="tbExit6" Grid.Column="3" Grid.Row="6" Margin="10,32,10,32" TextAlignment="Center" FontSize="30"/>
+
+        <TextBlock Grid.Column="4" Grid.Row="0"  TextAlignment="Center" Style="{StaticResource ResourceKey=tbStyleHeader}" Background="#FF5EAD89">Зарплата</TextBlock>
+        <TextBlock Grid.Column="5" Grid.Row="0"  TextAlignment="Center" Style="{StaticResource ResourceKey=tbStyleHeader}" Background="#FF5EAD89"></TextBlock>
+        <TextBlock x:Name="tbPrice1" Grid.Column="4" Grid.Row="1" TextAlignment="Center" FontSize="30" Margin="10,32,10,32"/>
+        <TextBlock x:Name="tbPrice2" Grid.Column="4" Grid.Row="2" TextAlignment="Center" FontSize="30" Margin="10,32,10,32"/>
+        <TextBlock x:Name="tbPrice3" Grid.Column="4" Grid.Row="3" TextAlignment="Center" FontSize="30" Margin="10,32,10,32"/>
+        <TextBlock x:Name="tbPrice4" Grid.Column="4" Grid.Row="4" TextAlignment="Center" FontSize="30" Margin="10,32,10,32"/>
+        <TextBlock x:Name="tbPrice5" Grid.Column="4" Grid.Row="5" TextAlignment="Center" FontSize="30" Margin="10,32,10,32"/>
+        <TextBlock x:Name="tbPrice6" Grid.Column="4" Grid.Row="6" TextAlignment="Center" FontSize="30" Margin="10,32,10,32"/>
+
+        <Button x:Name="btCalculate1" Grid.Column="5" Grid.Row="1" Margin="10,49" Cursor="Hand" Content="Расчитать"  Background="#FF00AFF1" Foreground="#FFE4E4FF" FontWeight="Bold" FontSize="18" Click="btCalculate1_Click"/>
+        <Button x:Name="btCalculate2" Grid.Column="5" Grid.Row="2" Margin="10,49" Cursor="Hand" Content="Расчитать" Click="btCalculate2_Click"/>
+        <Button x:Name="btCalculate3" Grid.Column="5" Grid.Row="3" Margin="10,49" Cursor="Hand" Content="Расчитать" Click="btCalculate3_Click"/>
+        <Button x:Name="btCalculate4" Grid.Column="5" Grid.Row="4" Margin="10,49" Cursor="Hand" Content="Расчитать" Click="btCalculate4_Click"/>
+        <Button x:Name="btCalculate5" Grid.Column="5" Grid.Row="5" Margin="10,49" Cursor="Hand" Content="Расчитать" Click="btCalculate5_Click"/>
+        <Button x:Name="btCalculate6" Grid.Column="5" Grid.Row="6" Margin="10,49" Cursor="Hand" Content="Расчитать" Click="btCalculate6_Click"/>
+
+        <TextBlock Grid.Column="0" Grid.Row="7" Margin="10,45">Для кого расчитать<LineBreak/> Зарплату ?</TextBlock>
+        <ComboBox x:Name="cbPeople" Grid.Column="1" Grid.Row="7"  Margin="10,45" Cursor="Hand" SelectedIndex="0" FontWeight="Bold" Grid.ColumnSpan="2" FontSize="22">
+            <ComboBoxItem>Я</ComboBoxItem>
+            <ComboBoxItem>Ангелина Кузнецова</ComboBoxItem>
+            <ComboBoxItem>Фатима Османова</ComboBoxItem>
+            <ComboBoxItem>Света Ягъяева</ComboBoxItem>
+            <ComboBoxItem>Молодой парень</ComboBoxItem>
+            <ComboBoxItem>Марина Семенова</ComboBoxItem>
+        </ComboBox>
+        <TextBlock x:Name="tbPrice7" Grid.Column="3" Grid.Row="7" TextAlignment="Center" FontSize="30" Margin="10,32,10,32"/>
+        <Button Grid.Column="4" Grid.Row="7"  Margin="10,45" Cursor="Hand" Content="Расчитать" Click="Button_Click"/>
     </Grid>
 </Window>
