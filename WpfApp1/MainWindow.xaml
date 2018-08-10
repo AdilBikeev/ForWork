@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
         Title="MainWindow" Height="948" Width="915"
-        Loaded="Window_Loaded">
+        Loaded="Window_Loaded" Icon="фото для проекта.png">
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -145,14 +145,14 @@
         <TextBlock x:Name="tbPrice5" Grid.Column="4" Grid.Row="5" TextAlignment="Center" FontSize="30" Margin="10,32,10,32"/>
         <TextBlock x:Name="tbPrice6" Grid.Column="4" Grid.Row="6" TextAlignment="Center" FontSize="30" Margin="10,32,10,32"/>
 
-        <Button x:Name="btCalculate1" Grid.Column="5" Grid.Row="1" Margin="10,49" Cursor="Hand" Content="Расчитать"  Background="#FF00AFF1" Foreground="#FFE4E4FF" FontWeight="Bold" FontSize="18" Click="btCalculate1_Click"/>
-        <Button x:Name="btCalculate2" Grid.Column="5" Grid.Row="2" Margin="10,49" Cursor="Hand" Content="Расчитать" Click="btCalculate2_Click"/>
-        <Button x:Name="btCalculate3" Grid.Column="5" Grid.Row="3" Margin="10,49" Cursor="Hand" Content="Расчитать" Click="btCalculate3_Click"/>
-        <Button x:Name="btCalculate4" Grid.Column="5" Grid.Row="4" Margin="10,49" Cursor="Hand" Content="Расчитать" Click="btCalculate4_Click"/>
-        <Button x:Name="btCalculate5" Grid.Column="5" Grid.Row="5" Margin="10,49" Cursor="Hand" Content="Расчитать" Click="btCalculate5_Click"/>
-        <Button x:Name="btCalculate6" Grid.Column="5" Grid.Row="6" Margin="10,49" Cursor="Hand" Content="Расчитать" Click="btCalculate6_Click"/>
+        <Button x:Name="btCalculate1" Grid.Column="5" Grid.Row="1" Content="Расчитать" Click="btCalculate1_Click" Style="{StaticResource ResourceKey=btStyleCalculate}"/>
+        <Button x:Name="btCalculate2" Grid.Column="5" Grid.Row="2" Content="Расчитать" Click="btCalculate2_Click" Style="{StaticResource ResourceKey=btStyleCalculate}"/>
+        <Button x:Name="btCalculate3" Grid.Column="5" Grid.Row="3" Content="Расчитать" Click="btCalculate3_Click" Style="{StaticResource ResourceKey=btStyleCalculate}"/>
+        <Button x:Name="btCalculate4" Grid.Column="5" Grid.Row="4" Content="Расчитать" Click="btCalculate4_Click" Style="{StaticResource ResourceKey=btStyleCalculate}"/>
+        <Button x:Name="btCalculate5" Grid.Column="5" Grid.Row="5" Content="Расчитать" Click="btCalculate5_Click" Style="{StaticResource ResourceKey=btStyleCalculate}"/>
+        <Button x:Name="btCalculate6" Grid.Column="5" Grid.Row="6" Content="Расчитать" Click="btCalculate6_Click" Style="{StaticResource ResourceKey=btStyleCalculate}"/>
 
-        <TextBlock Grid.Column="0" Grid.Row="7" Margin="10,45">Для кого расчитать<LineBreak/> Зарплату ?</TextBlock>
+        <TextBlock Grid.Column="0" Grid.Row="7" TextAlignment="Center" Padding="0,35,0,0" Background="#FFFF5700" Foreground="White" FontWeight="Bold" FontSize="16" >Для кого расчитать<LineBreak/> Зарплату ?</TextBlock>
         <ComboBox x:Name="cbPeople" Grid.Column="1" Grid.Row="7"  Margin="10,45" Cursor="Hand" SelectedIndex="0" FontWeight="Bold" Grid.ColumnSpan="2" FontSize="22">
             <ComboBoxItem>Я</ComboBoxItem>
             <ComboBoxItem>Ангелина Кузнецова</ComboBoxItem>
@@ -162,6 +162,6 @@
             <ComboBoxItem>Марина Семенова</ComboBoxItem>
         </ComboBox>
         <TextBlock x:Name="tbPrice7" Grid.Column="3" Grid.Row="7" TextAlignment="Center" FontSize="30" Margin="10,32,10,32"/>
-        <Button Grid.Column="4" Grid.Row="7"  Margin="10,45" Cursor="Hand" Content="Расчитать" Click="Button_Click"/>
+        <Button Grid.Column="4" Grid.Row="7" Grid.ColumnSpan="2"   Content="Расчитать" Click="Button_Click" Style="{StaticResource ResourceKey=btStyleCalculate}"/>
     </Grid>
 </Window>

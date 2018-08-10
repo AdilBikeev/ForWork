@@ -20,4 +20,14 @@
         <Setter Property="Control.Background" Value="#FFCACED1"/>
         <Setter Property="Control.FontSize" Value="18"/>
     </Style>
+
+    <Style x:Key="btStyleCalculate">
+        <Setter Property="Control.FontWeight" Value="Bold"/>
+        <Setter Property="Control.Foreground" Value="White"/>
+        <Setter Property="Control.Background" Value="#FF00AFF1"/>
+        <Setter Property="Control.Cursor" Value="Hand"/>
+        <Setter Property="Control.Margin" Value="10,49"/>
+        <Setter Property="Control.FontSize" Value="18"/>
+    </Style>
+    
 </ResourceDictionary>
