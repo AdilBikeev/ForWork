@@ -45,7 +45,7 @@ namespace WpfApp1
                             num++;
                         }
                     }
-                    if (num != 0) tbPrice1.Text = ((Convert.ToDouble(tbExit1.Text)) / num).ToString();
+                    if (num != 0) tbPrice1.Text = ((Convert.ToDouble(tbExit1.Text)*5) / num).ToString();
                     else tbPrice1.Text = "0";
                 }
                 else
@@ -72,7 +72,7 @@ namespace WpfApp1
                             num++;
                         }
                     }
-                    if (num != 0) tbPrice2.Text = ((Convert.ToDouble(tbExit2.Text)) / num).ToString();
+                    if (num != 0) tbPrice2.Text = ((Convert.ToDouble(tbExit2.Text)*5) / num).ToString();
                     else tbPrice2.Text = "0";
                 }
                 else
@@ -100,7 +100,7 @@ namespace WpfApp1
                             num++;
                         }
                     }
-                    if (num != 0) tbPrice3.Text = ((Convert.ToDouble(tbExit3.Text)) / num).ToString();
+                    if (num != 0) tbPrice3.Text = ((Convert.ToDouble(tbExit3.Text)*5) / num).ToString();
                     else tbPrice3.Text = "0";
                 }
                 else
@@ -128,7 +128,7 @@ namespace WpfApp1
                             num++;
                         }
                     }
-                    if (num != 0) tbPrice4.Text = ((Convert.ToDouble(tbExit4.Text)) / num).ToString();
+                    if (num != 0) tbPrice4.Text = ((Convert.ToDouble(tbExit4.Text)*5) / num).ToString();
                     else tbPrice4.Text = "0";
                 }
                 else
@@ -156,7 +156,7 @@ namespace WpfApp1
                             num++;
                         }
                     }
-                    if (num != 0) tbPrice5.Text = ((Convert.ToDouble(tbExit5.Text)) / num).ToString();
+                    if (num != 0) tbPrice5.Text = ((Convert.ToDouble(tbExit5.Text)*5) / num).ToString();
                     else tbPrice5.Text = "0";
                 }
                 else
@@ -184,7 +184,7 @@ namespace WpfApp1
                             num++;
                         }
                     }
-                    if (num != 0) tbPrice6.Text = ((Convert.ToDouble(tbExit6.Text)) / num).ToString();
+                    if (num != 0) tbPrice6.Text = ((Convert.ToDouble(tbExit6.Text)*5) / num).ToString();
                     else tbPrice6.Text = "0";
                 }
                 else
@@ -248,6 +248,12 @@ namespace WpfApp1
             }
 
             tbPrice7.Text = price.ToString() + "р.";
+        }
+
+        private void btCalculator_Click(object sender, RoutedEventArgs e)
+        {
+            Calculator calculator = new Calculator();
+            calculator.Show();
         }
     }
 }

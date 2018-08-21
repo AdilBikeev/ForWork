@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
         Title="MainWindow" Height="948" Width="915"
-        Loaded="Window_Loaded" Icon="фото для проекта.png">
+        Loaded="Window_Loaded">
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -49,10 +49,10 @@
         <StackPanel  Grid.Column="1" Grid.Row="1" >
             <ListBox x:Name="lb1" Background="#FFE7E8EA">
                 <CheckBox   Content="Я" Background="#FF5EAD89" />
-                <CheckBox   Content="Ангелина Кузнецов" Background="#FF5EAD89"/>
+                <CheckBox   Content="Ангелина Державцева" Background="#FF5EAD89"/>
                 <CheckBox   Content="Фатима Османова" Background="#FF5EAD89"/>
                 <CheckBox   Content="Света Ягъяева" Background="#FF5EAD89"/>
-                <CheckBox   Content="Молодой парень" Background="#FF5EAD89"/>
+                <CheckBox   Content="Андрей" Background="#FF5EAD89"/>
                 <CheckBox   Content="Марина Семёнова" Background="#FF5EAD89"/>
             </ListBox>
         </StackPanel>
@@ -61,10 +61,10 @@
         <StackPanel  Grid.Column="1" Grid.Row="2" >
             <ListBox x:Name="lb2" Background="#FFE7E8EA">
                 <CheckBox   Content="Я" Background="#FF5EAD89"/>
-                <CheckBox   Content="Ангелина Кузнецов" Background="#FF5EAD89"/>
+                <CheckBox   Content="Ангелина Державцева" Background="#FF5EAD89"/>
                 <CheckBox   Content="Фатима Османова" Background="#FF5EAD89"/>
                 <CheckBox   Content="Света Ягъяева" Background="#FF5EAD89"/>
-                <CheckBox   Content="Молодой парень" Background="#FF5EAD89"/>
+                <CheckBox   Content="Андрей" Background="#FF5EAD89"/>
                 <CheckBox   Content="Марина Семёнова" Background="#FF5EAD89"/>
             </ListBox>
 
@@ -74,10 +74,10 @@
         <StackPanel  Grid.Column="1" Grid.Row="3" >
             <ListBox x:Name="lb3" Background="#FFE7E8EA">
                 <CheckBox   Content="Я" Background="#FF5EAD89"/>
-                <CheckBox   Content="Ангелина Кузнецов" Background="#FF5EAD89"/>
+                <CheckBox   Content="Ангелина Державцева" Background="#FF5EAD89"/>
                 <CheckBox   Content="Фатима Османова" Background="#FF5EAD89"/>
                 <CheckBox   Content="Света Ягъяева" Background="#FF5EAD89"/>
-                <CheckBox   Content="Молодой парень" Background="#FF5EAD89"/>
+                <CheckBox   Content="Андрей" Background="#FF5EAD89"/>
                 <CheckBox   Content="Марина Семёнова" Background="#FF5EAD89"/>
             </ListBox>
         </StackPanel>
@@ -86,10 +86,10 @@
         <StackPanel  Grid.Column="1" Grid.Row="4" >
             <ListBox x:Name="lb4" Background="#FFE7E8EA">
                 <CheckBox   Content="Я" Background="#FF5EAD89"/>
-                <CheckBox   Content="Ангелина Кузнецов" Background="#FF5EAD89"/>
+                <CheckBox   Content="Ангелина Державцева" Background="#FF5EAD89"/>
                 <CheckBox   Content="Фатима Османова" Background="#FF5EAD89"/>
                 <CheckBox   Content="Света Ягъяева" Background="#FF5EAD89"/>
-                <CheckBox   Content="Молодой парень" Background="#FF5EAD89"/>
+                <CheckBox   Content="Андрей" Background="#FF5EAD89"/>
                 <CheckBox   Content="Марина Семёнова" Background="#FF5EAD89"/>
             </ListBox>
         </StackPanel>
@@ -98,10 +98,10 @@
         <StackPanel  Grid.Column="1" Grid.Row="5" >
             <ListBox x:Name="lb5" Background="#FFE7E8EA">
                 <CheckBox   Content="Я" Background="#FF5EAD89"/>
-                <CheckBox   Content="Ангелина Кузнецов" Background="#FF5EAD89"/>
+                <CheckBox   Content="Ангелина Державцева" Background="#FF5EAD89"/>
                 <CheckBox   Content="Фатима Османова" Background="#FF5EAD89"/>
                 <CheckBox   Content="Света Ягъяева" Background="#FF5EAD89"/>
-                <CheckBox   Content="Молодой парень" Background="#FF5EAD89"/>
+                <CheckBox   Content="Андрей" Background="#FF5EAD89"/>
                 <CheckBox   Content="Марина Семёнова" Background="#FF5EAD89"/>
             </ListBox>
         </StackPanel>
@@ -110,10 +110,10 @@
         <StackPanel  Grid.Column="1" Grid.Row="6" >
             <ListBox x:Name="lb6" Background="#FFE7E8EA">
                 <CheckBox   Content="Я" Background="#FF5EAD89"/>
-                <CheckBox   Content="Ангелина Кузнецов" Background="#FF5EAD89"/>
+                <CheckBox   Content="Ангелина Державцева" Background="#FF5EAD89"/>
                 <CheckBox   Content="Фатима Османова" Background="#FF5EAD89"/>
                 <CheckBox   Content="Света Ягъяева" Background="#FF5EAD89"/>
-                <CheckBox   Content="Молодой парень" Background="#FF5EAD89"/>
+                <CheckBox   Content="Андрей" Background="#FF5EAD89"/>
                 <CheckBox   Content="Марина Семёнова" Background="#FF5EAD89"/>
             </ListBox>
         </StackPanel>
@@ -137,7 +137,7 @@
         <TextBox x:Name="tbExit6" Grid.Column="3" Grid.Row="6" Margin="10,32,10,32" TextAlignment="Center" FontSize="30"/>
 
         <TextBlock Grid.Column="4" Grid.Row="0"  TextAlignment="Center" Style="{StaticResource ResourceKey=tbStyleHeader}" Background="#FF5EAD89">Зарплата</TextBlock>
-        <TextBlock Grid.Column="5" Grid.Row="0"  TextAlignment="Center" Style="{StaticResource ResourceKey=tbStyleHeader}" Background="#FF5EAD89"></TextBlock>
+        <Button x:Name="btCalculator" Content="Калькулятор" Grid.Column="5" Grid.Row="0"   Style="{StaticResource ResourceKey=tbStyleHeader}" Click="btCalculator_Click"  Background="Yellow"/>
         <TextBlock x:Name="tbPrice1" Grid.Column="4" Grid.Row="1" TextAlignment="Center" FontSize="30" Margin="10,32,10,32"/>
         <TextBlock x:Name="tbPrice2" Grid.Column="4" Grid.Row="2" TextAlignment="Center" FontSize="30" Margin="10,32,10,32"/>
         <TextBlock x:Name="tbPrice3" Grid.Column="4" Grid.Row="3" TextAlignment="Center" FontSize="30" Margin="10,32,10,32"/>
@@ -155,10 +155,10 @@
         <TextBlock Grid.Column="0" Grid.Row="7" TextAlignment="Center" Padding="0,35,0,0" Background="#FFFF5700" Foreground="White" FontWeight="Bold" FontSize="16" >Для кого расчитать<LineBreak/> Зарплату ?</TextBlock>
         <ComboBox x:Name="cbPeople" Grid.Column="1" Grid.Row="7"  Margin="10,45" Cursor="Hand" SelectedIndex="0" FontWeight="Bold" Grid.ColumnSpan="2" FontSize="22">
             <ComboBoxItem>Я</ComboBoxItem>
-            <ComboBoxItem>Ангелина Кузнецова</ComboBoxItem>
+            <ComboBoxItem>Ангелина Державцева</ComboBoxItem>
             <ComboBoxItem>Фатима Османова</ComboBoxItem>
             <ComboBoxItem>Света Ягъяева</ComboBoxItem>
-            <ComboBoxItem>Молодой парень</ComboBoxItem>
+            <ComboBoxItem>Андрей</ComboBoxItem>
             <ComboBoxItem>Марина Семенова</ComboBoxItem>
         </ComboBox>
         <TextBlock x:Name="tbPrice7" Grid.Column="3" Grid.Row="7" TextAlignment="Center" FontSize="30" Margin="10,32,10,32"/>
